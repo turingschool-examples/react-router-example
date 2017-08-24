@@ -49,9 +49,20 @@ React Router allows us to:
 
 ### Types of routers
 
-* `BrowserRouter`: A <Router> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
-* `HashRouter`: A <Router> that uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL.
+* `BrowserRouter`: A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
+* `HashRouter`: A Router that uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL.
 
+We will be focusing on `BrowserRouter` since we want our users to be able to bookmork specific paths and utilize their forward/back buttons. 
+
+There are a few more tools we get with React Router that are important to know about:
+
+##### Route
+
+#### Link && NavLink
+
+#### Redirect
+
+#### Switch
 
 
 
