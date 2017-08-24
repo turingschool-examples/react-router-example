@@ -9,3 +9,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     * BrowserRouter
     * Route
     * Link / NavLink
+    
+### Why Routing?
+
+Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
+
+```
+class SomeComponent extends Component {
+  constructor() {
+     super()
+     this.state = {
+         showWelcome: false
+     }
+  }
+  
+  render() {
+     return (
+         { this.state.showWelcome && <Welcome /> }
+     )
+  }
+}
+```
