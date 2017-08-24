@@ -35,11 +35,11 @@ This works...but as our applications grow larger and we seek to render more comp
 
 Enter [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
 
-** From the Docs **
+**From the Docs**
 
 React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering
 
-** In a nutshell... **
+**In a nutshell...**
 
 React Router allows us to:
 
