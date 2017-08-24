@@ -47,8 +47,10 @@ React Router allows us to:
 * Bookmark specific page/view within our application
 * Utilize the `back` and `forward` buttons in our browser
 
+### Types of routers
 
-
+* `BrowserRouter`: A <Router> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
+* `HashRouter`: A <Router> that uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL.
 
 
 
