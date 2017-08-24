@@ -30,3 +30,32 @@ class SomeComponent extends Component {
   }
 }
 ```
+
+This works...but as our applications grow larger and we seek to render more components, these conditinal toggles can become difficult to manage. 
+
+Enter [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
+
+** From the Docs **
+
+React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering
+
+** In a nutshell... **
+
+React Router allows us to:
+
+* Define which component(s) are rendering based on the URL pathname.
+* Bookmark specific page/view within our application
+* Utilize the `back` and `forward` buttons in our browser
+
+
+
+
+
+
+
+
+
+
+#### Resources:
+
+* [React Router Training](https://reacttraining.com/react-router/web/guides/philosophy)
