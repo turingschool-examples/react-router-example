@@ -47,22 +47,63 @@ React Router allows us to:
 * Bookmark specific page/view within our application
 * Utilize the `back` and `forward` buttons in our browser
 
-### Types of routers
+##### Router
 
-* `BrowserRouter`: A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
-* `HashRouter`: A Router that uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL.
+There are many high-level routers that come with the `react-router-dom` module:
 
-We will be focusing on `BrowserRouter` since we want our users to be able to bookmork specific paths and utilize their forward/back buttons. 
+* `<BrowserRouter>`
+* `<HashRouter>`
+* `<MemoryRouter>`
+* `<NativeRouter>`
+* `<StaticRouter>`
+
+We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL._
+
+Ultimately it will allow our users to bookmork specific paths and utilize their forward/back buttons. 
 
 There are a few more tools we get with React Router that are important to know about:
 
 ##### Route
+The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
+ 
+There are 3 ways to render something with a Route:
+* `<Route component>`
+* `<Route render>`
+* `<Route children>`
 
-#### Link && NavLink
+Let's say we have a `Unicorns` component, here is what it would look like in each of these instances:
 
-#### Redirect
+**Component**
 
-#### Switch
+`<Route path='/unicorns' component={ Unicorns } />`
+
+**Render**
+
+`<Route path='/unicorns' render={ () => <Unicorns /> }`
+
+Render differs slightly from Component, let's check out the [docs](https://reacttraining.com/react-router/web/api/Route/component) to see what they say about it.
+
+**Children**
+
+`<Route path='/other-unicorns children={ () => <Unicorns /> } />`
+
+**Component > Render > Children**
+
+All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include: 
+
+* [match](https://reacttraining.com/react-router/web/api/match)
+* [location](https://reacttraining.com/react-router/web/api/location)
+* [history](https://reacttraining.com/react-router/web/api/history)
+
+Take 10 minutes to read about these:
+
+
+
+##### Link && NavLink
+
+##### Redirect
+
+##### Switch
 
 
 
