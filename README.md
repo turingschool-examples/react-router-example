@@ -232,6 +232,32 @@ ReactDOM.render(router, document.getElementById('root'));
 
 ```
 
+Next we will go to our `App.js` file and begin constructing the routes for our application. We'll need to import some additional pieces from the library.
+
+```App.js
+
+import { Route, NavLink, Link } from 'react-router-dom'
+```
+
+Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `activeClassName` attribute. 
+
+* **It comes with a default class of `.active` so we can either use that without defining it, or define a new name.**
+
+```
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header>
+          <NavLink to='/unicorns'> Unicorns </NavLink>
+          <NavLink to='/puppies'> Puppies </NavLink>
+          <NavLink to='/sharks'> Sharks </NavLink>
+        </header>
+      </div>
+    );
+  }
+}
+```
 
 
 #### Resources:
