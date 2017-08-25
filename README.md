@@ -63,7 +63,7 @@ Ultimately it will allow our users to bookmork specific paths and utilize their 
 
 There are a few more tools we get with React Router that are important to know about:
 
-##### Route
+### Route
 The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
  
 There are 3 ways to render something with a Route:
@@ -75,19 +75,28 @@ Let's say we have a `Unicorns` component, here is what it would look like in eac
 
 **Component**
 
-`<Route path='/unicorns' component={ Unicorns } />`
+```
+<Route path='/unicorns' component={ Unicorns } />
+```
 
 **Render**
 
-`<Route path='/unicorns' render={ () => <Unicorns /> }`
+```
+<Route path='/unicorns' render={ () => <Unicorns /> }
+```
 
 Render differs slightly from Component, let's check out the [docs](https://reacttraining.com/react-router/web/api/Route/component) to see what they say about it.
 
 **Children**
 
-`<Route path='/other-unicorns children={ () => <Unicorns /> } />`
+```
+<Route path='/other-unicorns children={ () => <Unicorns /> } />
+```
+
 
 **Component > Render > Children**
+
+`Component` supercedes `Render` which supercedes `Children` so be sure to only include one within a route.
 
 All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include: 
 
@@ -95,18 +104,83 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 * [location](https://reacttraining.com/react-router/web/api/location)
 * [history](https://reacttraining.com/react-router/web/api/history)
 
-Take 10 minutes to read about these:
+**Take 10 minutes to read about these**
 
+---
 
+### Link
 
-##### Link && NavLink
+_Provides declarative, accessible navigation around your application._
 
-##### Redirect
+**Things to know:**
 
-##### Switch
+* Link can contain an open and closing tag or be a self-closing tag
+* Link takes a `to` attribute as well as an optional `replace` attribute
+* `to` tells the app which path to redirect to. This can be a string or an object
+* `replace` is a boolean that when `true` will replace the current entry in the history stack instead of adding a new one
 
+```
+<Link to='/unicorns' />
 
+<Link to='/unicorns'> Unicorns </Link>
 
+```
+
+---
+
+### NavLink
+
+_A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL._
+
+It can take the following attributes:
+
+* activeClassName: string
+* activeStyle: object
+* exact: bool
+* strict: bool
+* isActive: func
+* location: object
+
+**Read about each of these [here](https://reacttraining.com/react-router/web/api/NavLink)**
+
+```
+<NavLink to="/about">About</NavLink>
+```
+
+---
+
+### Redirect
+
+_Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
+
+It can take the following attributes:
+
+* to: string
+* to: object
+* push: bool
+* from: string
+
+```
+<Redirect to="/not/unicorns"/>
+
+```
+
+---
+
+### Switch
+
+_Renders the **first** child <Route> or <Redirect> that matches the location. `<Switch>` is unique in that it renders a route **exclusively**. In contrast, every <Route> that matches the location renders **inclusively**_
+
+```
+<Switch>
+  <Route exact path="/" component={Home}/>
+  <Route path="/about" component={About}/>
+  <Route path="/:user" component={User}/>
+  <Route component={NoMatch}/>
+</Switch>
+```
+
+The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
 
 
 
