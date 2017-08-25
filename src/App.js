@@ -21,16 +21,17 @@ export default class App extends Component {
           </header>
         </div>
 
-        <Switch>
-          <Route path='/unicorns' component={Unicorns} />
+        {/* had to put 'exact' in route to avoid rendering both the unicorns and the detail data */}
+          <Route exact path='/unicorns' component={Unicorns} />
           <Route path='/sharks' component={Sharks} />
           <Route path='/puppies' component={Puppies} />
 
           <Route path='/unicorns/:id' render={({ match }) => {
-            const unicorn = unicornData.find(uni => uni.id === parseInt(match.params.id))
-            return <CreatureDetails {...unicorn} />
+            const creature = unicornData.find(uni => uni.id === parseInt(match.params.id))
+            if (creature) {
+              return <CreatureDetails {...creature} />
+            }
           }}/>
-        </Switch>
       </div>
     );
   }

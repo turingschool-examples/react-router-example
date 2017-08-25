@@ -6,7 +6,7 @@ import ImageCard from './ImageCard';
 
 const Unicorns = () => {
 
-const displayUnicorns = unicornData.map((unicorn, i) => <ImageCard {...unicorn} key={unicorn.name + i} className='app-img'/>)
+const displayUnicorns = unicornData.map((unicorn, i) => <ImageCard {...unicorn} key={unicorn.name + i} />)
 
   return (
     <div className='image-display'>
