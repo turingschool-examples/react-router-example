@@ -84,6 +84,19 @@ Let's say we have a `Unicorns` component, here is what it would look like in eac
 ```
 <Route path='/unicorns' render={ () => <Unicorns /> }
 ```
+This also allows you to define and pass specific properties to a component dynamically. For example:
+
+```
+<Route path='/ideas/:id' render={({ match }) => {
+  const idea = ideas.find(idea => idea.id === parseInt(match.params.id));
+  
+  if (idea) {
+    return <ListItem match={match} {...idea} />;
+  }
+  
+  return (<div>This idea does not exist! </div>);
+}} />
+```
 
 Render differs slightly from Component, let's check out the [docs](https://reacttraining.com/react-router/web/api/Route/component) to see what they say about it.
 
@@ -181,6 +194,16 @@ _Renders the **first** child <Route> or <Redirect> that matches the location. `<
 ```
 
 The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
+
+---
+
+Enough talk, let's implement React Router!
+
+* Clone this repo and `cd` into it
+* npm i
+* open your text editor
+
+
 
 
 
