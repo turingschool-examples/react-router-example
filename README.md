@@ -203,7 +203,34 @@ Enough talk, let's implement React Router!
 * npm i
 * open your text editor
 
+This application will provide us with a `Main` landing page as well as 3 routes to pages containing:
+* Unicorns
+* Puppies
+* Sharks
 
+Additionally we will add a dynamic route to dig deeper into a specific creatures cards.
+
+First let's install `react-router-dom`
+
+```
+npm i -S react-router-dom
+```
+
+Next let's go import it and wrap it around our main entry point `App`:
+
+```index.js
+
+import { BrowserRouter } from 'react-router-dom'
+
+const router = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+)
+
+ReactDOM.render(router, document.getElementById('root'));
+
+```
 
 
 
