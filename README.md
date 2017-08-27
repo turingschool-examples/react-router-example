@@ -262,14 +262,58 @@ export default class App extends Component {
 }
 ```
 
-If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`. Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` route working.
+If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`. 
+
+Next we need to define a `Home` route for when users first arrive to the app (or when the `path='/'`). For now we'll just do a basic welcome message:
+
+```Home.js
+
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome!</h1>
+      <h4>Click on the links above to see a variety of creatures</h4>
+    </div>
+  )
+}
+
+export default Home;
+```
+
+Now let's define the route:
+
+```App.js
+
+<Route path='/' component={Home} />
+```
+
+### Your Turn!
+
+Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying a `<div>` with the word "Unicorns!"
 
 _hint: You'll probably need to create a new component to render when on the `/unicorns` route_
 
 ![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
 
+Here's how we can do it using the `component` render method on a `Route`:
 
+```App.js
 
+<Route path='/unicorns' component={Unicorns} />
+<Route path='/sharks' component={Sharks} />
+<Route path='/puppies' component={Puppies} />
+```
+
+At this point clicking a header link (NavLink) should change the URL and render the component associated with that Route...however, we're still seeing out `Home` component above, what's with that?
+
+This is where we need to use the `exact` attribute on a `Route`
+
+```App.js
+
+<Route **exact** path='/' component={Home} />
+```
 
 #### Resources:
 
