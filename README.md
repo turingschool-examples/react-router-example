@@ -315,7 +315,7 @@ This is where we need to use the `exact` attribute on a `Route`
 <Route exact path='/' component={Home} />
 ```
 
-Now, what we're saying is only when the path is **EXACTly** `'/'` do we want to render the Home component.
+Now, what we're saying is only when the path is **EXACT**ly `'/'` do we want to render the `Home` component.
 
 #### Resources:
 
