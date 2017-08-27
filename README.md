@@ -264,6 +264,11 @@ export default class App extends Component {
 
 If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`. Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` route working.
 
+_hint: You'll probably need to create a new component to render when on the `/unicorns` route_
+
+![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
+
+
 
 
 #### Resources:
