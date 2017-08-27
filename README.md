@@ -241,23 +241,29 @@ import { Route, NavLink, Link } from 'react-router-dom'
 
 Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `activeClassName` attribute. 
 
-* **It comes with a default class of `.active` so we can either use that without defining it, or define a new name.**
+_**It comes with a default class of `.active` so we can either use that without defining it, or define a new name.**_
 
 ```
 export default class App extends Component {
+  
   render() {
     return (
       <div className="App">
-        <header>
-          <NavLink to='/unicorns'> Unicorns </NavLink>
-          <NavLink to='/puppies'> Puppies </NavLink>
-          <NavLink to='/sharks'> Sharks </NavLink>
-        </header>
+        <div className='header-section'>
+          <header>
+            <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
+            <NavLink to='/puppies' className='nav'> Puppies </NavLink>
+            <NavLink to='/sharks' className='nav'> Sharks </NavLink>
+          </header>
+        </div>
       </div>
     );
   }
 }
 ```
+
+If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`. Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` route working.
+
 
 
 #### Resources:
