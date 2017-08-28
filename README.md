@@ -199,8 +199,6 @@ The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job
 
 Enough talk, let's implement React Router!
 
----
-
 * Clone this repo and `cd` into it
 * checkout the `in-class` branch
 * npm i
