@@ -59,7 +59,7 @@ There are many high-level routers that come with the `react-router-dom` module:
 
 We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL._
 
-Ultimately it will allow our users to bookmork specific paths and utilize their forward/back buttons. 
+Ultimately it will allow our users to bookmark specific paths and utilize their forward/back buttons. 
 
 There are a few more tools we get with React Router that are important to know about:
 
