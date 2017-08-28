@@ -312,7 +312,7 @@ Here's how we can do it using the `component` render method on a `Route`:
 <Route path='/unicorns' component={Unicorns} />
 ```
 
-At this point clicking a header link (NavLink) should change the URL and render the component associated with that Route...however, we're still seeing out `Home` component above, what's with that?
+At this point clicking a header link (NavLink) should change the URL and render the component associated with that Route...however, we're still seeing the `Home` component above, what's with that?
 
 This is where we need to use the `exact` attribute on a `Route`
 
