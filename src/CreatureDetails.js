@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './image-display.css';
+import { Link } from 'react-router-dom';
 
 const CreatureDetails = ({ id, name, image, bio, type }) => {
   return (
