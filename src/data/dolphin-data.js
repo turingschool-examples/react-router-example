@@ -28,15 +28,15 @@ const bio8 = "No, no, it's pronounced a-nal-ra-pist. And here you are coming out
 const bio9 = "WHY was this show cancelled? I mean, COME ON. This is not me encouraging you to go here and write a review. No."
 
 const dolphinData = [
-  { id: 1, name: 'The Hammer', image: img1, type: 'dolphins', bio: bio1 },
-  { id: 2, name: 'Carol', image: img2, type: 'dolphins', bio: bio2  },
-  { id: 3, name: 'Jaws', image: img9, type: 'dolphins', bio: bio3 },
-  { id: 4, name: 'The Bash Bros', image: img4, type: 'dolphins', bio: bio4 },
-  { id: 5, name: 'Spot', image: img5, type: 'dolphins', bio: bio5 },
-  { id: 6, name: 'Kid Cutty', image: img6, type: 'dolphins', bio: bio6 },
-  { id: 7, name: 'Dory', image: img7, type: 'dolphins', bio: bio7 },
-  { id: 8, name: 'Darrell', image: img8, type: 'dolphins', bio: bio8 },
-  { id: 9, name: 'Bernie', image: img3, type: 'dolphins', bio: bio9 }
+  { id: 1, name: 'Greg', image: img1, type: 'dolphins', bio: bio1 },
+  { id: 2, name: 'Betty', image: img2, type: 'dolphins', bio: bio2  },
+  { id: 3, name: 'DJ Kool', image: img9, type: 'dolphins', bio: bio3 },
+  { id: 4, name: 'Sir Smiles', image: img4, type: 'dolphins', bio: bio4 },
+  { id: 5, name: 'Geoffery', image: img5, type: 'dolphins', bio: bio5 },
+  { id: 6, name: 'Princess Grenadine', image: img6, type: 'dolphins', bio: bio6 },
+  { id: 7, name: 'Dan Marino', image: img7, type: 'dolphins', bio: bio7 },
+  { id: 8, name: 'Pinnochio', image: img8, type: 'dolphins', bio: bio8 },
+  { id: 9, name: 'Pinky', image: img3, type: 'dolphins', bio: bio9 }
 ]
 
 export default dolphinData
