@@ -111,6 +111,8 @@ It works exactly like render except that it gets called whether there is a match
 
 `Component` supercedes `Render` which supercedes `Children` so be sure to only include one within a route.
 
+**Route Props**
+
 All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include: 
 
 * [match](https://reacttraining.com/react-router/web/api/match)
