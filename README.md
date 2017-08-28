@@ -416,7 +416,7 @@ So, if our first unicorn's data looks like this:
 	
 We want to redirect to `/unicorns/1`
 
-Then, we want to then define a `Route` that looks at the parameter in the URL and passes the specific matching data into something we can render.
+Then, we want to define a `Route` that looks at the parameter in the URL and passes the specific matching data into something we can render.
 
 Let's poke the bear a little bit. Paste this route into your `App.js` file:
 
