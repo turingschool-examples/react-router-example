@@ -1,12 +1,13 @@
 import React from 'react';
 import './image-display.css';
-import image1 from './unicorn-images/unicorn-1.png'
-import sharkData from './shark-data.js';
-
+import sharkData from './data/shark-data'
+import ImageCard  from './ImageCard'
 
 const Sharks = () => {
 
-const displaySharks = sharkData.map((shark, i) => <img src={shark.image} className='app-img' key={`shark ${i}`}/>)
+  const displaySharks = sharkData.map((shark, i) =>
+    <ImageCard { ...shark } key={shark.type + i}/>
+  )
 
   return (
     <div className='image-display'>

@@ -1,12 +1,13 @@
 import React from 'react';
 import './image-display.css';
-import image1 from './unicorn-images/unicorn-1.png'
-import puppyData from './puppy-data.js';
-
+import puppyData from './data/puppy-data';
+import ImageCard from './ImageCard';
 
 const Puppies = () => {
 
-const displayPuppies = puppyData.map((puppy, i) => <img src={puppy.image} className='app-img' key={`puppy ${i}`}/>)
+const displayPuppies = puppyData.map((puppy, i) =>
+  <ImageCard {...puppy} key={puppy.type + i} />
+)
 
   return (
     <div className='image-display'>

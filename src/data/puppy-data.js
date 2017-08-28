@@ -1,12 +1,12 @@
-import img1 from './unicorn-images/unicorn-1.png'
-import img2 from './unicorn-images/unicorn-2.png'
-import img3 from './unicorn-images/unicorn-3.png'
-import img4 from './unicorn-images/unicorn-4.png'
-import img5 from './unicorn-images/unicorn-5.png'
-import img6 from './unicorn-images/unicorn-6.png'
-import img7 from './unicorn-images/unicorn-7.png'
-import img8 from './unicorn-images/unicorn-8.png'
-import img9 from './unicorn-images/unicorn-9.png'
+import img1 from './puppy-images/puppy-1.jpg'
+import img2 from './puppy-images/puppy-2.jpg'
+import img3 from './puppy-images/puppy-3.jpg'
+import img4 from './puppy-images/puppy-4.jpg'
+import img5 from './puppy-images/puppy-5.jpg'
+import img6 from './puppy-images/puppy-6.jpg'
+import img7 from './puppy-images/puppy-7.jpg'
+import img8 from './puppy-images/puppy-8.jpg'
+import img9 from './puppy-images/puppy-9.jpg'
 
 const bio1 = "I will pack your sweet pink mouth with so much ice cream you'll be the envy of every Jerry and Jane on the block! A trick is something a whore does for money… or cocaine. I'll have a vodka rocks. (Mom, it's breakfast time.) And a piece of toast. No, I was ashamed to be SEEN with you. I like being with you. What do you expect, Mother? I'm half machine! I'm a monster!! Wine only turns to alcohol if you let it sit."
 
@@ -27,16 +27,17 @@ const bio8 = "No, no, it's pronounced a-nal-ra-pist. And here you are coming out
 
 const bio9 = "WHY was this show cancelled? I mean, COME ON. This is not me encouraging you to go here and write a review. No."
 
-const unicornData = [
-  { id: 1, name: 'Spike', image: img1, type: 'unicorns', bio: bio1 },
-  { id: 2, name: 'Spike', image: img2, type: 'unicorns', bio: bio2 },
-  { id: 3, name: 'Spike', image: img3, type: 'unicorns', bio: bio3 },
-  { id: 4, name: 'Spike', image: img4, type: 'unicorns', bio: bio4 },
-  { id: 5, name: 'Spike', image: img5, type: 'unicorns', bio: bio5 },
-  { id: 6, name: 'Spike', image: img6, type: 'unicorns', bio: bio6 },
-  { id: 7, name: 'Spike', image: img7, type: 'unicorns', bio: bio7 },
-  { id: 8, name: 'Spike', image: img8, type: 'unicorns', bio: bio8 },
-  { id: 9, name: 'Spike', image: img9, type: 'unicorns', bio: bio9 }
+const puppyData = [
+  { id: 1, name: 'Booger', image: img1, type: 'puppies', bio: bio1 },
+  { id: 2, name: 'Sammy', image: img2, type: 'puppies', bio: bio2  },
+  { id: 3, name: 'MJ', image: img3, type: 'puppies', bio: bio3 },
+  { id: 4, name: 'Chief Chirpa', image: img4, type: 'puppies', bio: bio4 },
+  { id: 5, name: 'Rosie', image: img5, type: 'puppies', bio: bio5 },
+  { id: 6, name: 'Stu', image: img6, type: 'puppies', bio: bio6 },
+  { id: 7, name: 'Lucy', image: img7, type: 'puppies', bio: bio7 },
+  { id: 8, name: 'Gunther', image: img8, type: 'puppies', bio: bio8 },
+  { id: 9, name: 'Cheech', image: img9, type: 'puppies', bio: bio9 }
 ]
 
-export default unicornData
+console.log('puppyData ', puppyData);
+export default puppyData

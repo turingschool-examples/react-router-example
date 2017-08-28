@@ -1,3 +1,11 @@
+/*
+blue:   #4CDEF5
+green:  #A4D555
+pink:   #FF5992
+purple  #841983
+*/
+
+
 .app-img {
   width: 30%;
   height: 300px;
@@ -8,7 +16,7 @@
 
 .app-img:hover {
   cursor: pointer;
-  transform: scale(1.02);
+  transform: scale(1.04);
   transform: rotate(2deg);
   transition: all ease-in-out .3s;
 }
@@ -28,4 +36,17 @@
  .creature-bio {
   width: 75%;
   margin: 20px auto;
+}
+
+.back-btn {
+  display: block;
+  margin: 10px auto;
+}
+
+.back-btn:visited {
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  color: #A4D555;
 }
