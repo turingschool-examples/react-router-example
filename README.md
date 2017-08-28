@@ -199,9 +199,14 @@ The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job
 
 Enough talk, let's implement React Router!
 
+---
+
 * Clone this repo and `cd` into it
+* checkout the `in-class` branch
 * npm i
 * open your text editor
+
+---
 
 This application will provide us with a `Main` landing page as well as 3 routes to pages containing:
 * Unicorns
