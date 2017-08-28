@@ -291,7 +291,7 @@ Now let's define the route:
 
 ### Your Turn!
 
-Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying a `<div>` with the word "Unicorns!"
+Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
 
 _hint: You'll probably need to create a new component to render when on the `/unicorns` route_
 
@@ -302,8 +302,6 @@ Here's how we can do it using the `component` render method on a `Route`:
 ```App.js
 
 <Route path='/unicorns' component={Unicorns} />
-<Route path='/sharks' component={Sharks} />
-<Route path='/puppies' component={Puppies} />
 ```
 
 At this point clicking a header link (NavLink) should change the URL and render the component associated with that Route...however, we're still seeing out `Home` component above, what's with that?
@@ -315,7 +313,61 @@ This is where we need to use the `exact` attribute on a `Route`
 <Route exact path='/' component={Home} />
 ```
 
-Now, what we're saying is only when the path is **EXACT**ly `'/'` do we want to render the `Home` component.
+What we're saying by adding this attribute is that only when the path is **EXACT**ly `'/'` do we want to render the `Home` component.
+
+Now that we have routes defined, and a template of a component, let's get something more fun displaying. Go to your `Unicorns` component and replace what you have with this code:
+
+```Unicorns.js
+
+import React from 'react';
+import './image-display.css';
+import unicornData from './data/unicorn-data'
+
+const Unicorns = () => {
+
+  const displayUnicorns = unicornData.map((unicorn, i) => <img src={unicorn.image} className='app-img' key={unicorn.type + i}/>)
+
+  return (
+    <div className='image-display'>
+      <h1>Unicorns!</h1>
+      {displayUnicorns}
+    </div>
+  )
+}
+
+export default Unicorns;
+```
+
+We should now be able to see a bunch of unicorns displaying on the page!
+
+### Your Turn!
+
+Take some time to mimic these steps for `Puppies` and `Sharks` so that each respective route shows images of their respective creatures.
+
+**A few things to keep in mind:**
+
+* Each component will share classNames and need the `image-display.css` file
+* Each component will need their respective data:
+	* `unicorn-data.js`
+	* `puppy-data.js`
+	* `shark-data.js`
+
+![whaaaat?!](https://i.imgflip.com/160nr0.jpg)
+
+**Let's recap where we're at:**
+
+* We have defined four Routes:
+	* `/` 
+	* `/unicorns`
+	* `/puppies`
+	* `/sharks`
+* Each route renders a different component
+* The `Home` route requires an `exact` attribute because all of the routes contain `/`
+
+Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
+
+### Dynamic Routes
+
 
 #### Resources:
 
