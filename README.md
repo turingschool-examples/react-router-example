@@ -47,7 +47,7 @@ React Router allows us to:
 * Bookmark specific page/view within our application
 * Utilize the `back` and `forward` buttons in our browser
 
-#### Router
+### Router
 
 There are many high-level routers that come with the `react-router-dom` module:
 
@@ -63,7 +63,7 @@ Ultimately it will allow our users to bookmork specific paths and utilize their 
 
 There are a few more tools we get with React Router that are important to know about:
 
-#### Route
+### Route
 The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
  
 There are 3 ways to render something with a Route:
@@ -111,7 +111,7 @@ It works exactly like render except that it gets called whether there is a match
 
 `Component` supercedes `Render` which supercedes `Children` so be sure to only include one within a route.
 
-#### Route Props
+### Route Props
 
 All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include: 
 
