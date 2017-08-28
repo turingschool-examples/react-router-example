@@ -406,11 +406,11 @@ So, if our first unicorn's data looks like this:
 	
 ```
 { 
-	id: 1, 
-	name: 'Chuck', 
-	image: img1, 
-	type: 'unicorns', 
-	bio: bio1 
+  id: 1, 
+  name: 'Chuck', 
+  image: img1, 
+  type: 'unicorns', 
+  bio: bio1 
 }
 ``` 
 	
