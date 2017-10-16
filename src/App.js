@@ -4,6 +4,7 @@ import { Route, NavLink, Link, Switch, Redirect } from 'react-router-dom';
 import Unicorns from './Unicorns';
 import Sharks from './Sharks';
 import Home from './Home';
+import Header from './Header';
 import Puppies from './Puppies';
 import CreatureDetails from './CreatureDetails';
 import unicornData from './data/unicorn-data';
@@ -15,14 +16,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='header-section'>
-          <header>
-            <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
-            <NavLink to='/puppies' className='nav'> Puppies </NavLink>
-            <NavLink to='/sharks' className='nav'> Sharks </NavLink>
-          </header>
-        </div>
 
+        <Route path='/' component={Header} />
         <Route exact path='/' component={Home} />
         <Route exact path='/unicorns' component={Unicorns} />
         <Route exact path='/sharks' component={Sharks} />
