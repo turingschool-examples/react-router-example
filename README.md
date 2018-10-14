@@ -334,7 +334,7 @@ What we're saying by adding this attribute is that only when the path is **EXACT
 
 Now that we have routes defined, and a template of a component, let's get something more fun displaying. Go to your `Unicorns` component and replace what you have with this code:
 
-```
+```js
 //Unicorns.js
 
 import React from 'react';
@@ -343,7 +343,9 @@ import unicornData from './data/unicorn-data'
 
 const Unicorns = () => {
 
-  const displayUnicorns = unicornData.map((unicorn, i) => <img src={unicorn.image} className='app-img' key={unicorn.type + i}/>)
+  const displayUnicorns = unicornData.map((unicorn, i) => (
+    <img src={unicorn.image} className='app-img' key={unicorn.id} />
+  ))
 
   return (
     <div className='image-display'>
