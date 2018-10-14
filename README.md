@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
 
-```
+```js
 class SomeComponent extends Component {
   constructor() {
      super()
@@ -81,18 +81,18 @@ Let's say we have a `Unicorns` component, here is what it would look like in eac
 
 **Component**
 
-```
+```js
 <Route path='/unicorns' component={ Unicorns } />
 ```
 
 **Render**
 
-```
+```js
 <Route path='/unicorns' render={ () => <Unicorns /> }
 ```
 This also allows you to define and pass specific properties to a component dynamically. For example:
 
-```
+```js
 <Route path='/ideas/:id' render={({ match }) => {
   const idea = ideas.find(idea => idea.id === parseInt(match.params.id));
   
@@ -108,7 +108,7 @@ Render differs slightly from Component, let's check out the [docs](https://react
 
 **Children**
 
-```
+```js
 <Route path='/other-unicorns children={ () => <Unicorns /> } />
 ```
 It works exactly like render except that it gets called whether there is a match or not.
@@ -163,7 +163,7 @@ It can take the following attributes:
 
 **Read about each of these [here](https://reacttraining.com/react-router/web/api/NavLink)**
 
-```
+```js
 <NavLink to='/about'>About</NavLink>
 ```
 
@@ -180,7 +180,7 @@ It can take the following attributes:
 * push: bool
 * from: string
 
-```
+```js
 <Redirect to='/not/unicorns' />
 ```
 
@@ -190,7 +190,7 @@ It can take the following attributes:
 
 _Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively**(only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively**(more than one route can match and render at a time)_
 
-```
+```js
 <Switch>
   <Route exact path='/' component={Home} />
   <Route path='/users/add' component={UserAddPage} />
@@ -229,7 +229,7 @@ npm i --save react-router-dom
 
 Next let's go import it and wrap it around our main entry point `App`:
 
-```
+```js
 //index.js
 
 import { BrowserRouter } from 'react-router-dom'
@@ -246,7 +246,7 @@ ReactDOM.render(router, document.getElementById('root'));
 
 Next we will go to our `App.js` file and begin constructing the routes for our application. We'll need to import some additional pieces from the library.
 
-```
+```js
 //App.js
 
 import { Route, NavLink, Link } from 'react-router-dom'
@@ -256,7 +256,7 @@ Now let's build a header to persist on all views. We will use `NavLink` so we ca
 
 _**It comes with a default class of `.active` so we can either use that without defining it, or define a new name.**_
 
-```
+```js
 export default class App extends Component {
   
   render() {
@@ -279,7 +279,7 @@ If you click on these links now, you should see the URL change to the routes we 
 
 Next we need to define a `Home` route for when users first arrive to the app (or when the `path='/'`). For now we'll just do a basic welcome message:
 
-```
+```js
 //Home.js
 
 import React from 'react';
@@ -298,7 +298,7 @@ export default Home;
 
 Now let's define the route:
 
-```
+```js
 //App.js
 
 <Route path='/' component={Home} />
@@ -314,7 +314,7 @@ _hint: You'll probably need to create a new component to render when on the `/un
 
 Here's how we can do it using the `component` render method on a `Route`:
 
-```
+```js
 //App.js
 
 <Route path='/unicorns' component={Unicorns} />
@@ -324,7 +324,7 @@ At this point clicking a header link (NavLink) should change the URL and render 
 
 This is where we need to use the `exact` attribute on a `Route`
 
-```
+```js
 //App.js
 
 <Route exact path='/' component={Home} />
@@ -390,7 +390,7 @@ Hopefully this seems pretty straight forward so far, but what if we want to go a
 
 Currently we have 9 creatures per component and we want to be able to link to a specific view for **each creature**. One way we could do this is to create a route for each creature...something like:
 
-```
+```js
 <Route to='/unicorns/1' />
 <Route to='/unicorns/2' />
 <Route to='/unicorns/3' />
@@ -430,7 +430,7 @@ Then, we want to define a `Route` that looks at the parameter in the URL and pas
 
 Let's poke the bear a little bit. Paste this route into your `App.js` file:
 
-```
+```js
 //App.js
 
 <Route path='/unicorns/:id' render={({ match }) => {
@@ -454,7 +454,9 @@ First thing we should see is that all of our unicorns are still showing, why do 
 
 It's because we didn't specify the `exact` attribute in our `/unicorns` route, so that route sees the URL is `/unicorns/1`, considers it a match and renders any components that match. Let's fix this for all three components:
 
-```App.js
+```js
+// App.js
+
 <Route exact path='/unicorns' component={Unicorns} />
 <Route exact path='/sharks' component={Sharks} />
 <Route exact path='/puppies' component={Puppies} />
@@ -480,7 +482,7 @@ See if you can write some codes to render the correct data based on the ID in th
 
 Here's the code:
 
-```
+```js
 <Route path='/unicorns/:id' render={({ match }) => {
 	const { id } = match.params
 	const creature = unicornData.find(uni => uni.id === parseInt(id))
@@ -505,7 +507,7 @@ First we `import { Link } from 'react-router-dom'`
 
 Then we just wrap what we returned before with a `<Link>` as such:
 
-```
+```js
 const displayUnicorns = unicornData.map((unicorn, i) => {
 	return (
 	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.type + i}>
@@ -517,7 +519,7 @@ const displayUnicorns = unicornData.map((unicorn, i) => {
 
 If we really wanted to be efficent, we could turn this into a separate component since our `Puppies` and `Sharks` components are likely to operate the same way. So instead we can just render the component and pass through all of the data as such:
 
-```
+```js
 // Unicorn.js
 
 import React from 'react';
@@ -542,7 +544,7 @@ const Unicorns = () => {
 export default Unicorns;
 ```
 
-```
+```js
 // ImageCard.js
 
 import React from 'react';
