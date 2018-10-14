@@ -39,5 +39,4 @@ const puppyData = [
   { id: 9, name: 'Cheech', image: img9, type: 'puppies', bio: bio9 }
 ]
 
-console.log('puppyData ', puppyData);
 export default puppyData
