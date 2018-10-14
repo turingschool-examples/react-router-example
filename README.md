@@ -510,7 +510,7 @@ Then we just wrap what we returned before with a `<Link>` as such:
 ```js
 const displayUnicorns = unicornData.map((unicorn, i) => {
 	return (
-	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.type + i}>
+	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.id}>
 	    <img src={unicorn.image} className='app-img' />
 	  </Link>
 	)
@@ -530,7 +530,7 @@ import ImageCard from './ImageCard';
 const Unicorns = () => {
 
 	const displayUnicorns = unicornData.map((unicorn, i) => 
-		<ImageCard {...unicorn} key={unicorn.name + i} className='app-img'/>
+		<ImageCard {...unicorn} key={unicorn.id} className='app-img'/>
 	)
 
 	return (
