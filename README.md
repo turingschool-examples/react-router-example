@@ -3,7 +3,7 @@
 
 Enough talk, let's implement React Router!
 
-* Clone [this repo](https://github.com/turingschool-examples/react-router-example) and `cd` into it
+* Clone this repo and `cd` into it
 * checkout the `in-class` branch
 * `npm i`
 * `npm start`
