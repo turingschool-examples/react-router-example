@@ -34,9 +34,9 @@ const unicornData = [
   { id: 4, name: 'Spike', image: img4, type: 'unicorns', bio: bio4 },
   { id: 5, name: 'Sparkles', image: img5, type: 'unicorns', bio: bio5 },
   { id: 6, name: 'Lady Gray', image: img6, type: 'unicorns', bio: bio6 },
-  { id: 7, name: 'Spike', image: img7, type: 'unicorns', bio: bio7 },
-  { id: 8, name: 'Lisa Frank', image: img8, type: 'unicorns', bio: bio8 },
-  { id: 9, name: 'Lewith', image: img9, type: 'unicorns', bio: bio9 }
+  { id: 7, name: 'Delworth', image: img7, type: 'unicorns', bio: bio7 },
+  { id: 8, name: 'Lisa', image: img8, type: 'unicorns', bio: bio8 },
+  { id: 9, name: 'Yikes', image: img9, type: 'unicorns', bio: bio9 }
 ]
 
 export default unicornData
