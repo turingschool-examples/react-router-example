@@ -31,12 +31,12 @@ const puppyData = [
   { id: 1, name: 'Booger', image: img1, type: 'puppies', bio: bio1 },
   { id: 2, name: 'Sammy', image: img2, type: 'puppies', bio: bio2  },
   { id: 3, name: 'MJ', image: img3, type: 'puppies', bio: bio3 },
-  { id: 4, name: 'Chief Chirpa', image: img4, type: 'puppies', bio: bio4 },
+  { id: 4, name: 'Mr Sniffles', image: img4, type: 'puppies', bio: bio4 },
   { id: 5, name: 'Rosie', image: img5, type: 'puppies', bio: bio5 },
   { id: 6, name: 'Stu', image: img6, type: 'puppies', bio: bio6 },
   { id: 7, name: 'Lucy', image: img7, type: 'puppies', bio: bio7 },
   { id: 8, name: 'Gunther', image: img8, type: 'puppies', bio: bio8 },
-  { id: 9, name: 'Cheech', image: img9, type: 'puppies', bio: bio9 }
+  { id: 9, name: 'Hilda', image: img9, type: 'puppies', bio: bio9 }
 ]
 
 export default puppyData
